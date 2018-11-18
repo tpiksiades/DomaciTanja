@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Paran_i_neparan_broj_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Unesite dva prirodna broja: ");
+            int x = int.Parse(Console.ReadLine());
+            int y = int.Parse(Console.ReadLine());
+            int z;
+            if (x % 2 == 0)
+            {
+                if (y % 2 == 0)
+                {
+                    z = x * y;
+                    Console.WriteLine("Proizvod brojeva {0} i {1} je {2} ", x, y, z);
+                }
+                else
+                {
+                    z = x - y;
+                    Console.WriteLine("Razlika brojeva {0} i {1} je {2} ", x, y, z);
+                }
+            }
+            else
+            {
+                if (y % 2 != 0)
+                {
+                    float a = Convert.ToSingle(x);
+                    float b = Convert.ToSingle(y);
+                    float d = a / b;
+                    Console.WriteLine("Kolicnik brojeva {0} i {1} je {2} ", x , y, d);
+                }
+
+            }
+            Console.ReadKey();
+        }
+    }
+}
